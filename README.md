@@ -1,2 +1,7 @@
-# tic-tac-toe
-1 or 2 player tic-tac-toe game
+# Tic-Tac-Toe
+
+Play Tic-Tac-Toe with a friend.
+
+This is a front end application.
+
+In order to run application type "npm start" in terminal.
