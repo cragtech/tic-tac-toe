@@ -52,11 +52,14 @@ function App() {
   const resetGame = () => {
     setSquares(['', '', '', '', '', '', '', '', '']);
     setSquareChar(player1Char);
+    setPlayer1BorderStyle(playerBorderRed);
+    setPlayer2BorderStyle(playerBorderNone);
   }
 
   const resetScore = () => {
     setPlayer1Score(0);
     setPlayer2Score(0);
+    resetGame();
   }
 
   useEffect(() => {
