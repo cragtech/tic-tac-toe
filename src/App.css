@@ -42,7 +42,12 @@ padding: 15px;
 border: 1px solid black;
 font-size: 25px;
 }
-.players-input {
+#player1-input {
+  border: none;
+  margin: 10px;
+  padding: 5px;
+}
+#player2-input {
   border: none;
   margin: 10px;
   padding: 5px;
