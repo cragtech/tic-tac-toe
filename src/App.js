@@ -5,14 +5,23 @@ import { Quote, Twitter } from 'react-bootstrap-icons';
 function App() {
   const [player1, setPlayer1] = useState('Player 1');
   const [player2, setPlayer2] = useState('Player 2');
+  const player1Char = 'X';
+  const player2Char = 'O';
   const [player1Score, setPlayer1Score] = useState(0);
   const [player2Score, setPlayer2Score] = useState(0);
-  const [squareChar, setSquareChar] = useState('X');
+  const [squareChar, setSquareChar] = useState(player1Char);
   const [squares, setSquares] = useState(['', '', '', '', '', '', '', '', '']);
 
+
   const squareClick = (indexVal) => {
-    setSquares({...squares, [indexVal]: squareChar});
-    setSquareChar('O')
+    const squaresArray = [...squares];
+    squaresArray[indexVal] = squareChar;
+    setSquares([...squaresArray]);
+    if (squareChar === player1Char) {
+      setSquareChar(player2Char);
+    } else {
+    setSquareChar(player1Char);
+    }
   }
 
   const horizontalChecker = () => {
@@ -33,6 +42,7 @@ function App() {
 
   const resetGame = () => {
     setSquares(['', '', '', '', '', '', '', '', '']);
+    setSquareChar(player1Char);
   }
 
   const resetScore = () => {
