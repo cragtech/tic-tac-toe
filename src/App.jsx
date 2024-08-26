@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import './App.css';
-import { Quote, Twitter } from 'react-bootstrap-icons';
 
 function App() {
   const [initialMove, setInitalMove] = useState(true);
@@ -203,10 +202,8 @@ function App() {
           </div>
         </div>
         <div id="score-board-button-group">
-          <div className="Reset-buttons">
             <button className="score-board-button" onClick={resetScore}>Reset Score</button>
             <button className="score-board-button" onClick={resetGame}>Reset Game</button>
-          </div>
         </div>
 
       </div>
